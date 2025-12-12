@@ -19,4 +19,5 @@ RoxygenNote: 7.3.3
 Imports:
     bsseq,
     curl
-
+URL: https://github.com/altintasali/ratSpermBSseqData
+BugReports: https://github.com/altintasali/ratSpermBSseqData/issues
