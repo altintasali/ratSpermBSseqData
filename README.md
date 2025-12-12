@@ -1,4 +1,8 @@
 
+``` r
+options(usethis.quiet = TRUE)
+```
+
 # ratSpermBSseqData <https://img.shields.io/badge/data-package-blue.svg>
 
 ## Overview
@@ -21,16 +25,32 @@ You can install the development version from GitHub using one of the
 following methods:
 
 ``` r
-if (!require("pak")) install.packages("pak")
+if (!require("remotes")) install.packages("remotes")
 ```
 
-    ## Loading required package: pak
-
-    ## Warning: package 'pak' was built under R version 4.4.3
+    ## Loading required package: remotes
 
 ``` r
-#pak::pak("altintasali/ratSpermBSseqData")
+remotes::install_github("altintasali/ratSpermBSseqData", dependencies = TRUE)
 ```
+
+    ## Using GitHub PAT from the git credential store.
+
+    ## Downloading GitHub repo altintasali/ratSpermBSseqData@HEAD
+
+    ## Skipping 1 packages not available: bsseq
+
+    ## -- R CMD build -----------------------------------------------------------------
+    ## * checking for file '/private/var/folders/kw/_1qc90r520x9lb5gdc83ct5m0000gn/T/RtmpRW7h1f/remotesf39929686bd1/altintasali-ratSpermBSseqData-aedeee0/DESCRIPTION' ... OK
+    ## * preparing 'ratSpermBSseqData':
+    ## * checking DESCRIPTION meta-information ... OK
+    ## * checking for LF line-endings in source and make files and shell scripts
+    ## * checking for empty or unneeded directories
+    ## * looking to see if a 'data/datalist' file should be added
+    ## * building 'ratSpermBSseqData_0.1.0.tar.gz'
+
+    ## Installing package into '/private/var/folders/kw/_1qc90r520x9lb5gdc83ct5m0000gn/T/Rtmpn9wZqJ/temp_libpathef313b37744f'
+    ## (as 'lib' is unspecified)
 
 # Usage
 
@@ -56,94 +76,6 @@ bsseq_rat_sperm
 
 ``` r
 library(bsseq)
-```
-
-    ## Loading required package: BiocGenerics
-
-    ## 
-    ## Attaching package: 'BiocGenerics'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     IQR, mad, sd, var, xtabs
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     Filter, Find, Map, Position, Reduce, anyDuplicated, aperm, append,
-    ##     as.data.frame, basename, cbind, colnames, dirname, do.call,
-    ##     duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
-    ##     lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
-    ##     pmin.int, rank, rbind, rownames, sapply, saveRDS, setdiff, table,
-    ##     tapply, union, unique, unsplit, which.max, which.min
-
-    ## Loading required package: GenomicRanges
-
-    ## Loading required package: stats4
-
-    ## Loading required package: S4Vectors
-
-    ## 
-    ## Attaching package: 'S4Vectors'
-
-    ## The following object is masked from 'package:utils':
-    ## 
-    ##     findMatches
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     I, expand.grid, unname
-
-    ## Loading required package: IRanges
-
-    ## Loading required package: GenomeInfoDb
-
-    ## Loading required package: SummarizedExperiment
-
-    ## Loading required package: MatrixGenerics
-
-    ## Loading required package: matrixStats
-
-    ## 
-    ## Attaching package: 'MatrixGenerics'
-
-    ## The following objects are masked from 'package:matrixStats':
-    ## 
-    ##     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
-    ##     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
-    ##     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
-    ##     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
-    ##     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
-    ##     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
-    ##     colWeightedMeans, colWeightedMedians, colWeightedSds,
-    ##     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
-    ##     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
-    ##     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
-    ##     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
-    ##     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
-    ##     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
-    ##     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
-    ##     rowWeightedSds, rowWeightedVars
-
-    ## Loading required package: Biobase
-
-    ## Welcome to Bioconductor
-    ## 
-    ##     Vignettes contain introductory material; view with
-    ##     'browseVignettes()'. To cite Bioconductor, see
-    ##     'citation("Biobase")', and for packages 'citation("pkgname")'.
-
-    ## 
-    ## Attaching package: 'Biobase'
-
-    ## The following object is masked from 'package:MatrixGenerics':
-    ## 
-    ##     rowMedians
-
-    ## The following objects are masked from 'package:matrixStats':
-    ## 
-    ##     anyMissing, rowMedians
-
-``` r
 cov <- getCoverage(bsseq_rat_sperm, type = "Cov")
 meth <- getCoverage(bsseq_rat_sperm, type = "M")
 

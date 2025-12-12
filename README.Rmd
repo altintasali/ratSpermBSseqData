@@ -2,6 +2,10 @@
 output: github_document
 ---
 
+```{r options}
+options(usethis.quiet = TRUE)
+```
+
 # ratSpermBSseqData https://img.shields.io/badge/data-package-blue.svg
 
 ## Overview
@@ -20,15 +24,15 @@ The dataset was constructed from Bismark coverage files using `bsseq::read.bisma
 You can install the development version from GitHub using one of the following methods:
 
 ```{r install_pak}
-if (!require("pak")) install.packages("pak")
-#pak::pak("altintasali/ratSpermBSseqData")
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("altintasali/ratSpermBSseqData", dependencies = TRUE)
 ```
 
 # Usage 
 
 ## Loading data
 
-```{r load_data} 
+```{r load_data, warning=FALSE, message=FALSE} 
 library(ratSpermBSseqData)
 
 # Load the BSseq object
@@ -40,8 +44,7 @@ bsseq_rat_sperm
 
 ## Extract information
 
-```{r extract_data}
-
+```{r extract_data, warning=FALSE, message=FALSE}
 library(bsseq)
 cov <- getCoverage(bsseq_rat_sperm, type = "Cov")
 meth <- getCoverage(bsseq_rat_sperm, type = "M")
