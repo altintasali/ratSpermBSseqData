@@ -1,0 +1,22 @@
+Package: ratSpermBSseqData
+Type: Package
+Title: Rat sperm BSseq dataset
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Ali", "Altintas",
+      email = "altintas.ali@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: A BSseq object built from Bismark coverage files representing rat sperm samples from GEO database (GSE173898). Placebo (Ctrl) and nicotine (Nico) treated F0 mothers. Sperm cells are isolated from F1 generation (n = 10 per group).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: false
+Depends: 
+    R (>= 3.5)
+RoxygenNote: 7.3.3
+Imports:
+    bsseq,
+    curl
+

@@ -1,0 +1,51 @@
+---
+output: github_document
+---
+
+# ratSpermBSseqData https://img.shields.io/badge/data-package-blue.svg
+
+## Overview
+
+`ratSpermBSseqData` is an **R data package** that provides the
+[`BSseq`](https://bioconductor.org/packages/release/bioc/html/bsseq.html) object with the methylation data by [Altintas et al. 2021](https://faseb.onlinelibrary.wiley.com/doi/10.1096/fj.202100215R) from the GEO database
+[GSE173898](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE173898). 
+
+Placebo (Ctrl) and nicotine (Nico) treated F0 mothers. Sperm cells are isolated from F1 generation (n = 10 per group).
+
+The dataset was constructed from Bismark coverage files using `bsseq::read.bismark()`.
+---
+
+## Installation
+
+You can install the development version from GitHub using one of the following methods:
+
+```{r install_pak}
+if (!require("pak")) install.packages("pak")
+#pak::pak("altintasali/ratSpermBSseqData")
+```
+
+# Usage 
+
+## Loading data
+
+```{r load_data} 
+library(ratSpermBSseqData)
+
+# Load the BSseq object
+data("bsseq_rat_sperm")
+
+# Inspect the object
+bsseq_rat_sperm
+```
+
+## Extract information
+
+```{r extract_data}
+
+library(bsseq)
+cov <- getCoverage(bsseq_rat_sperm, type = "Cov")
+meth <- getCoverage(bsseq_rat_sperm, type = "M")
+
+dim(cov)    # rows = CpG loci, columns = samples
+head(cov)
+```
