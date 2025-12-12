@@ -6,7 +6,11 @@ output: github_document
 options(usethis.quiet = TRUE)
 ```
 
-# ratSpermBSseqData https://img.shields.io/badge/data-package-blue.svg
+<!-- badges: start -->
+![Data Package](https://img.shields.ioratSpermBSseqData
+<!-- badges: end -->
+
+# ratSpermBSseqData 
 
 ## Overview
 
@@ -23,7 +27,7 @@ The dataset was constructed from Bismark coverage files using `bsseq::read.bisma
 
 You can install the development version from GitHub using one of the following methods:
 
-```{r install_pak}
+```{r install_pakwarning=FALSE, message=FALSE}
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("altintasali/ratSpermBSseqData", dependencies = TRUE)
 ```

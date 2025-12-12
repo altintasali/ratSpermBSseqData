@@ -3,7 +3,12 @@
 options(usethis.quiet = TRUE)
 ```
 
-# ratSpermBSseqData <https://img.shields.io/badge/data-package-blue.svg>
+<!-- badges: start -->
+
+\![Data Package\](<https://img.shields.ioratSpermBSseqData>
+<!-- badges: end -->
+
+# ratSpermBSseqData
 
 ## Overview
 
@@ -26,31 +31,17 @@ following methods:
 
 ``` r
 if (!require("remotes")) install.packages("remotes")
-```
-
-    ## Loading required package: remotes
-
-``` r
 remotes::install_github("altintasali/ratSpermBSseqData", dependencies = TRUE)
 ```
 
-    ## Using GitHub PAT from the git credential store.
-
-    ## Downloading GitHub repo altintasali/ratSpermBSseqData@HEAD
-
-    ## Skipping 1 packages not available: bsseq
-
     ## -- R CMD build -----------------------------------------------------------------
-    ## * checking for file '/private/var/folders/kw/_1qc90r520x9lb5gdc83ct5m0000gn/T/RtmpRW7h1f/remotesf39929686bd1/altintasali-ratSpermBSseqData-aedeee0/DESCRIPTION' ... OK
+    ## * checking for file '/private/var/folders/kw/_1qc90r520x9lb5gdc83ct5m0000gn/T/RtmpEzDZxU/remotes106934e7ea8d3/altintasali-ratSpermBSseqData-8ffe127/DESCRIPTION' ... OK
     ## * preparing 'ratSpermBSseqData':
     ## * checking DESCRIPTION meta-information ... OK
     ## * checking for LF line-endings in source and make files and shell scripts
     ## * checking for empty or unneeded directories
     ## * looking to see if a 'data/datalist' file should be added
     ## * building 'ratSpermBSseqData_0.1.0.tar.gz'
-
-    ## Installing package into '/private/var/folders/kw/_1qc90r520x9lb5gdc83ct5m0000gn/T/Rtmpn9wZqJ/temp_libpathef313b37744f'
-    ## (as 'lib' is unspecified)
 
 # Usage
 
