@@ -1,11 +1,7 @@
 
-``` r
-options(usethis.quiet = TRUE)
-```
-
 <!-- badges: start -->
 
-\![Data Package\](<https://img.shields.ioratSpermBSseqData>
+![Data Package](https://img.shields.io/badge/data-package-blue)
 <!-- badges: end -->
 
 # ratSpermBSseqData
@@ -22,7 +18,8 @@ from the GEO database
 Placebo (Ctrl) and nicotine (Nico) treated F0 mothers. Sperm cells are
 isolated from F1 generation (n = 10 per group).
 
-## The dataset was constructed from Bismark coverage files using `bsseq::read.bismark()`.
+The dataset was constructed from Bismark coverage files using
+`bsseq::read.bismark()`.
 
 ## Installation
 
@@ -30,18 +27,12 @@ You can install the development version from GitHub using one of the
 following methods:
 
 ``` r
-if (!require("remotes")) install.packages("remotes")
-remotes::install_github("altintasali/ratSpermBSseqData", dependencies = TRUE)
+if(!require("remotes")){install.packages("remotes")}
+if(!require("ratSpermBSseqData")){
+  remotes::install_github("altintasali/ratSpermBSseqData", 
+                          dependencies = TRUE)
+}
 ```
-
-    ## -- R CMD build -----------------------------------------------------------------
-    ## * checking for file '/private/var/folders/kw/_1qc90r520x9lb5gdc83ct5m0000gn/T/RtmpEzDZxU/remotes106934e7ea8d3/altintasali-ratSpermBSseqData-8ffe127/DESCRIPTION' ... OK
-    ## * preparing 'ratSpermBSseqData':
-    ## * checking DESCRIPTION meta-information ... OK
-    ## * checking for LF line-endings in source and make files and shell scripts
-    ## * checking for empty or unneeded directories
-    ## * looking to see if a 'data/datalist' file should be added
-    ## * building 'ratSpermBSseqData_0.1.0.tar.gz'
 
 # Usage
 

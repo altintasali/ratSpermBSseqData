@@ -1,13 +1,8 @@
 ---
 output: github_document
 ---
-
-```{r options}
-options(usethis.quiet = TRUE)
-```
-
 <!-- badges: start -->
-![Data Package](https://img.shields.ioratSpermBSseqData
+![Data Package](https://img.shields.io/badge/data-package-blue)
 <!-- badges: end -->
 
 # ratSpermBSseqData 
@@ -21,15 +16,17 @@ options(usethis.quiet = TRUE)
 Placebo (Ctrl) and nicotine (Nico) treated F0 mothers. Sperm cells are isolated from F1 generation (n = 10 per group).
 
 The dataset was constructed from Bismark coverage files using `bsseq::read.bismark()`.
----
 
 ## Installation
 
 You can install the development version from GitHub using one of the following methods:
 
 ```{r install_pakwarning=FALSE, message=FALSE}
-if (!require("remotes")) install.packages("remotes")
-remotes::install_github("altintasali/ratSpermBSseqData", dependencies = TRUE)
+if(!require("remotes")){install.packages("remotes")}
+if(!require("ratSpermBSseqData")){
+  remotes::install_github("altintasali/ratSpermBSseqData", 
+                          dependencies = TRUE)
+}
 ```
 
 # Usage 
